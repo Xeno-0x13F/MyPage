@@ -1,0 +1,626 @@
+body {
+    background-color: white;
+    font-family: 'メイリオ';
+    margin: 0;
+}
+h1 {
+    font-size: 5vw;
+    color: black;
+    margin: 5vw 0 0 20vw;
+}
+h3 {
+    font-size: 3vw;
+    color: white;
+    margin: 0;
+    padding: 10vw 0 0 1vw;
+}
+video {
+    position: absolute;
+    top: 0;
+    height: 13vw;
+}
+.lang_switch {
+  position: absolute;
+  top: 0;
+  margin-left: 80vw;
+  background-color: rgb(160, 160, 160);
+}
+.header {
+    z-index: 10;
+    height: auto;
+    margin-top: 5vw;
+    background-color: rgb(160, 160, 160);
+    width: 100%;
+    text-align: center;
+}
+.gnavi, .menu {
+    display: inline-block;
+    padding: 0 2vw;
+}
+a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    color: white;
+}
+img {
+    height: 21vw;
+    width: 35vw;
+    box-shadow: 0 0 1.5vw #999;
+}
+.img1 {
+    margin: 1vw 2vw;
+}
+.img2 {
+    margin: 1vw -4vw 1vw 2vw;
+}
+#area-1 {
+    font-size: 1.5vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: white;
+    margin: 7vw;
+    padding: 7vw;
+    text-align: center;
+    box-shadow: 0 0 3vw rgb(180, 180, 180);  
+}
+#area-2 {
+    font-size: 4vw;
+    color: black;
+    text-align: center;
+    margin-top: 7vw;
+    width: 100%;
+}
+#area-3 {
+  z-index: 10;
+  height: auto;
+  display: flex;
+  background-color: rgb(160, 160, 160);
+  width: 100%;
+  padding-left: 2vw;
+  text-align: center;
+}
+.Chat {
+  position: absolute;
+}
+.flex {
+    display: flex;
+    margin-bottom: 10vw;
+}
+.text1 {
+    font-size: 2vw;
+    font-family: '游明朝';
+    color: rgb(60, 60, 60);
+    text-align: left;
+    line-height: 1.5;
+    padding: 1vw 1vw 1vw 0;
+}
+.text2 {
+  font-size: 2vw;
+  font-family: '游明朝';
+  color: rgb(60, 60, 60);
+  text-align: left;
+  line-height: 1.5;
+  padding: 1vw 1vw 1vw 2.5vw;
+}
+.prof1 {
+    margin: 4vw 0;
+    padding: 2vw 0 2vw 1vw;
+    list-style: none;
+    border: solid 0.2vw #feccaa;
+}
+.prof2 {
+    margin: 4vw 0 4vw 2vw;
+    padding: 2.2vw 5vw 2vw 1vw;
+    list-style: none;
+    border: solid 0.2vw #99ccfe;
+}
+.prof3 {
+    margin: 2vw 0;
+    padding: 2vw 0 2vw 1vw;
+    list-style: none;
+    border: solid 0.2vw #feaacc;
+}
+.prof4 {
+    margin: 2vw 0 4vw 2vw;
+    padding: 2vw 2vw 2vw 1vw;
+    list-style: none;
+    border: solid 0.2vw #99eedd;
+}
+.prof5 {
+    font-size: 3vw;
+    font-family: '游明朝';
+    color: rgb(60, 60, 60);
+    text-align: center;
+    border-bottom: solid 0.3vw #88dd44;
+    margin: 9vw 0 9vw 2vw;
+}
+.contents1 {
+    font-size: 2vw;
+    font-family: '游明朝';
+    color: rgb(60, 60, 60);
+    text-align: left;
+    line-height: 1.5;
+    padding: 1vw;
+}
+.contents2 {
+    font-size: 2vw;
+    font-family: '游明朝';
+    color: rgb(60, 60, 60);
+    text-align: left;
+    line-height: 1.5;
+    padding: 1vw;
+}
+.contents1:before {
+    content: '▸';
+    left : 1vw;
+    color: gray;
+}
+.contents2:before {
+    content: '▸';
+    left : 1vw;
+    color: gray;
+}
+.mmj {
+    font-size: 2vw;
+    font-family: '游明朝';
+    color: rgb(60, 60, 60);
+    text-align: left;
+    line-height: 1.5;
+    padding: 1vw 2.8vw;
+}
+.kome {
+    text-align: right;
+}
+.infooter {
+    font-size: 1vw;
+    text-align: left;
+    padding: 7vw 0 1vw 4vw;
+}
+.copyright {
+    font-size: 1vw;
+    color: white;
+    background-color: rgb(160, 160, 160);
+    margin: 0;
+    padding: 0.3vw 6vw;
+}
+.gnavi li a{
+  position: relative;
+}
+.gnavi li.current a,
+.gnavi li a:hover{
+color: white;
+}
+.gnavi li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  /*線の形状*/
+  width: 111%;
+  height: 0.2vw;
+  background: white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: left top;/*左上基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+/* fadeIn */
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+ 
+.fadeInTrigger{
+    opacity: 0;
+}
+
+/*スクロールリンクの形状*/
+.scroll-top {
+	/*表示位置*/
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	z-index: 2;
+	/*はじめは非表示*/
+	opacity: 0;
+	visibility: hidden; 
+	transition: opacity .5s, visibility .5s; /*それぞれに0.5秒の変化のアニメーション*/
+	/*縦書き*/
+	-webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+	/*改行禁止*/
+    white-space: nowrap;
+	/*矢印の動き*/
+	animation: arrowmove 1s ease-in-out infinite;
+}
+
+@keyframes arrowmove{
+      0%{bottom:20px;}
+      50%{bottom:25px;}
+     100%{bottom:20px;}
+ }
+
+
+/*.scroll-viewクラスがついたら出現*/
+.scroll-top.scroll-view {
+	opacity: 1;
+	visibility: visible;
+}
+
+/*リンク全体の aタグの形状*/
+.scroll-top a {
+	text-decoration: none;
+	color: #666;
+	text-transform: uppercase;
+	font-size:0.9rem;
+    display: block;
+}
+
+/*スクロールリンクの形状*/
+
+.js-scroll a::after{
+	content:"";
+	position: absolute;
+	top:0;
+	right:0;
+	width:1px;
+	height: 50px;
+	background:#666;
+}
+
+.js-scroll a::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -6px;
+    width: 1px;
+    height: 20px;
+    background: #666;
+    transform: skewX(-31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x), .js-scroll a::before{
+	right:-11px;
+}
+
+/*ページトップリンクの形状*/
+
+.js-pagetop a::after{
+	content:"";
+	position: absolute;
+	top:0;
+	right:0;
+	width:1px;
+	height: 50px;
+	background:#666;
+}
+
+.js-pagetop a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 1px;
+    height: 20px;
+    background: #666;
+    transform: skewX(31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x), .js-pagetop a::before{
+	right:0;
+}
+html {
+    box-sizing: border-box;
+    overflow-y: scroll; /* All browsers without overlaying scrollbars */
+    -webkit-text-size-adjust: 100%; /* iOS 8+ */
+  }
+  
+  *,
+  ::before,
+  ::after {
+    background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+    box-sizing: inherit;
+  }
+  
+  ::before,
+  ::after {
+    text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+    vertical-align: inherit;
+  }
+  /* Add the correct display in iOS 4-7.*/
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+  
+  hr {
+    overflow: visible; /* Show the overflow in Edge and IE */
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  main,
+  menu,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+  
+  summary {
+    display: list-item; /* Add the correct display in all browsers */
+  }
+  
+  small {
+    font-size: 80%; /* Set font-size to 80% in `small` elements */
+  }
+  
+  [hidden],
+  template {
+    display: none; /* Add the correct display in IE */
+  }
+  
+  abbr[title] {
+    border-bottom: 1px dotted; /* Add a bordered underline effect in all browsers */
+    text-decoration: none; /* Remove text decoration in Firefox 40+ */
+  }
+  
+  a {
+    background-color: transparent; /* Remove the gray background on active links in IE 10 */
+    -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+  }
+  
+  a:active,
+  a:hover {
+    outline-width: 0; /* Remove the outline when hovering in all browsers */
+  }
+  
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace, monospace; /* Specify the font family of code elements */
+  }
+  
+  b,
+  strong {
+    font-weight: bolder; /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+  }
+  
+  dfn {
+    font-style: italic; /* Address styling not present in Safari and Chrome */
+  }
+  
+  /* Address styling not present in IE 8/9 */
+  mark {
+    background-color: #ff0;
+    color: #000;
+  }
+  
+  /* https://gist.github.com/unruthless/413930 */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  input {
+    border-radius: 0;
+  }
+  
+  /* Apply cursor pointer to button elements */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  [role="button"] {
+    cursor: pointer;
+  }
+  
+  /* Replace pointer cursor in disabled elements */
+  [disabled] {
+    cursor: default;
+  }
+  
+  [type="number"] {
+    width: auto; /* Firefox 36+ */
+  }
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* Safari 8+ */
+  }
+  
+  [type="search"]::-webkit-search-cancel-button,
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; /* Safari 8 */
+  }
+  
+  textarea {
+    overflow: auto; /* Internet Explorer 11+ */
+    resize: vertical; /* Specify textarea resizability */
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font: inherit; /* Specify font inheritance of form elements */
+  }
+  
+  optgroup {
+    font-weight: bold; /* Restore the font weight unset by the previous rule. */
+  }
+  
+  button {
+    overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+  }
+  
+  /* Remove inner padding and border in Firefox 4+ */
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: 0;
+    padding: 0;
+  }
+  
+  /* Replace focus style removed in the border reset above */
+  button:-moz-focusring,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    outline: 1px dotted ButtonText;
+  }
+  
+  button,
+  html [type="button"], /* Prevent a WebKit bug where (2) destroys native `audio` and `video`controls in Android 4 */
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button; /* Correct the inability to style clickable types in iOS */
+  }
+  
+  button,
+  select {
+    text-transform: none; /* Firefox 40+, Internet Explorer 11- */
+  }
+  
+  /* Remove the default button styling in all browsers */
+  button,
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+  }
+  
+  /* Style select like a standard input */
+  select {
+    -moz-appearance: none; /* Firefox 36+ */
+    -webkit-appearance: none; /* Chrome 41+ */
+  }
+  
+  select::-ms-expand {
+    display: none; /* Internet Explorer 11+ */
+  }
+  
+  select::-ms-value {
+    color: currentColor; /* Internet Explorer 11+ */
+  }
+  
+  legend {
+    border: 0; /* Correct `color` not being inherited in IE 8/9/10/11 */
+    color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
+    display: table; /* Correct the text wrapping in Edge and IE */
+    max-width: 100%; /* Correct the text wrapping in Edge and IE */
+    white-space: normal; /* Correct the text wrapping in Edge and IE */
+  }
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* Correct the inability to style clickable types in iOS and Safari */
+    font: inherit; /* Change font properties to `inherit` in Chrome and Safari */
+  }
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
+    outline-offset: -2px; /* Correct the outline style in Safari */
+  }
+  
+  img {
+    border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+  }
+  
+  /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+  progress {
+    vertical-align: baseline;
+  }
+  
+  svg:not(:root) {
+    overflow: hidden; /* Internet Explorer 11- */
+  }
+  
+  audio,
+  canvas,
+  progress,
+  video {
+    display: inline-block; /* Internet Explorer 11+, Windows Phone 8.1+ */
+  }
+  
+  /* Hide content from screens but not screenreaders */
+  @media screen {
+    [hidden~="screen"] {
+      display: inherit;
+    }
+    [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+      position: absolute !important;
+      clip: rect(0 0 0 0) !important;
+    }
+  }
+  
+  /* Specify the progress cursor of updating elements */
+  [aria-busy="true"] {
+    cursor: progress;
+  }
+  
+  /* Specify the pointer cursor of trigger elements */
+  [aria-controls] {
+    cursor: pointer;
+  }
+  
+  /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+  [aria-disabled] {
+    cursor: default;
+  }
+  
+  ::-moz-selection {
+    background-color: #b3d4fc; /* Required when declaring ::selection */
+    color: #000;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background-color: #b3d4fc; /* Required when declaring ::selection */
+    color: #000;
+    text-shadow: none;
+  }
+  
